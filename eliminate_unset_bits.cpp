@@ -1,8 +1,8 @@
-#include "func.hpp" 
+#include "eliminate_unset_bits.hpp" 
 #include <cmath>
 using namespace std; 
 
-int func(string BinNumber) 
+long eliminate_unset_bits(string BinNumber) 
 { 
     string NewBinNumber = ""; 
     for (int i = 0; i < BinNumber.size(); ++i) 
@@ -14,7 +14,7 @@ int func(string BinNumber)
         return 0; 
     else 
     { 
-        int DNumber; 
+        long DNumber; 
         DNumber = pow(2, NewBinNumber.size()) - 1; 
         return DNumber; 
     } 
