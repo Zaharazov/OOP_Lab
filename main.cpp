@@ -1,12 +1,12 @@
 #include <iostream> 
-#include "func.hpp" 
+#include "eliminate_unset_bits.hpp" 
 using namespace std; 
 
 int main() 
 { 
     string BinNumber; 
     cin >> BinNumber; 
-    cout << func(BinNumber) << endl; 
+    cout << eliminate_unset_bits(BinNumber) << endl; 
 
     return 0; 
 }
