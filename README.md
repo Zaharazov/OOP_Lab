@@ -6,9 +6,14 @@
 
 На практике вы должны реализовать эту функцию: 
 
-long eliminate_unset_bits(string number); 
-Примеры 
-eliminate_unset_bits("1101010101010101") -> 255 (= 11111111) 
+long eliminate_unset_bits(string number);
+
+Примеры:
+
+eliminate_unset_bits("1101010101010101") -> 255 (= 11111111)
+
 eliminate_unset_bits("111") -> 7 
+
 eliminate_unset_bits("1000000") -> 1 
+
 eliminate_unset_bits("000") -> 0
