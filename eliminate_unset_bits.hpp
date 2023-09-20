@@ -3,4 +3,4 @@
 #include <string> 
 using namespace std; 
 
-int func(string BinNumber);
+eliminate_unset_bits(string BinNumber);
