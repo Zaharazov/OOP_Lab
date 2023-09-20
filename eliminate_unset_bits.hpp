@@ -3,4 +3,4 @@
 #include <string> 
 using namespace std; 
 
-eliminate_unset_bits(string BinNumber);
+long eliminate_unset_bits(string BinNumber);
