@@ -1,6 +1,6 @@
 #include <iostream>
 #include "seven.hpp"
-
+ 
 int main()
 {
     try
@@ -9,9 +9,9 @@ int main()
         char op;
         std::cout << "Enter an expression like: <value operator value> (separated by a space)" << std::endl;
         std::cin >> value1 >> op >> value2; 
-
+ 
         Seven number1 = Seven(value1), number2 = Seven(value2);
-
+ 
         switch (op)
         {
             case '+':
@@ -38,6 +38,10 @@ int main()
     {
         std::cout << "Invalid argument: " << error.what() << std::endl;
     }
-
+    catch(const std::underflow_error& error)
+    {
+        std::cout << "Underflow error: " << error.what() << std::endl;
+    }
+ 
     return 0;
 }
