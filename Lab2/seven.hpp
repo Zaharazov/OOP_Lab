@@ -1,21 +1,21 @@
 #pragma once
 #include <string>
-#include <vector>
-#include <stdexcept>
  
 class Seven
 {
     private:
-        std::vector<unsigned char> s_array;
+        unsigned char *s_array;
+        std::size_t s_size;
+        void resize_arr(const size_t);
  
     public:
         Seven();
-        Seven(const std::size_t & n, unsigned char);
-        Seven(const std::initializer_list<unsigned char> &t);
-        Seven(const std::string &t);
-        Seven(const Seven& other);
+        Seven(const std::size_t &, unsigned char);
+        Seven(const std::initializer_list<unsigned char> &);
+        Seven(const std::string &);
+        Seven(const Seven&);
         Seven(Seven&& other) noexcept;
-        virtual ~Seven() noexcept;
+        ~Seven() noexcept;
  
         Seven operator + (const Seven&);
         Seven operator - (const Seven&);
@@ -24,6 +24,5 @@ class Seven
         bool operator > (const Seven&);
         bool operator == (const Seven&);
  
-        std::string to_string() const noexcept;
-        friend std::ostream& operator << (std::ostream&, const Seven&);
+        std::string to_string() const;
 };
