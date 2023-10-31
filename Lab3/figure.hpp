@@ -9,7 +9,7 @@ class Figure
 
     public:
         Figure() noexcept;
-        ~Figure();
+        virtual ~Figure() = default;
 
         virtual std::pair<double, double> center() const = 0;
         virtual double f_square() const = 0;
