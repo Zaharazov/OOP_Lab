@@ -1,11 +1,12 @@
 cmake_minimum_required(VERSION 3.10)
 project(Lab03)
 
-# find_package(GTest REQUIRED)
-# include_directories(${GTEST_INCLUDE_DIRS})
+include_directories(${GTEST_INCLUDE_DIRS})
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+add_subdirectory(googletest)
 
 add_executable(
     lab_03
@@ -15,16 +16,14 @@ add_executable(
     square.cpp
     octagon.cpp)
 
+add_executable(
+    tests03
+    tests.cpp
+    figure.cpp
+    triangle.cpp
+    square.cpp
+    octagon.cpp)
 
-# enable_testing()
-# add_executable(
-#    tests03
-#    tests.cpp
-#    figure.cpp
-#    triangle.cpp
-#    square.cpp
-#    octagon.cpp)
-
-# target_link_libraries(tests03 ${GTEST_LIBRARIES})
-
-# add_test(NAME BASIC COMMAND tests03)
+ target_link_libraries(tests03 PRIVATE GTest::gtest_main)
+ include(GoogleTest)
+ gtest_discover_tests(tests03)
