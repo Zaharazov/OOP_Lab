@@ -1,0 +1,4 @@
+Werewolf Boba {6, 6}
+Druid Vova {7, 7}
+Werewolf Kruster {8, 8}
+Druid Gosha {9, 9}
